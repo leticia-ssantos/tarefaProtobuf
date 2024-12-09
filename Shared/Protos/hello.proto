@@ -1,8 +1,8 @@
 ﻿syntax = "proto3";
 
-package greet;
+package Protos;
 
-option csharp_namespace = "GrpcGreeter";
+option csharp_namespace = "Shared.Protos";
 
 
 message HelloRequest {
@@ -10,5 +10,5 @@ message HelloRequest {
 }
 
 message HelloReply {
-  string text = 1;
+  string message = 1;
 }

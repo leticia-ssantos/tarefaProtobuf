@@ -1,10 +1,10 @@
 using Grpc.Core;
 using Server;
-
+using Shared.Protos;
 
 namespace Server.Services
 {
-    public class GreeterService : Greeter.GreeterBase
+    public class GreeterService : Shared.Protos.Greeter.GreeterBase
     {
         //private readonly ILogger<GreeterService> _logger;
         //public GreeterService(ILogger<GreeterService> logger)
@@ -12,19 +12,22 @@ namespace Server.Services
         //    _logger = logger;
         //}
 
-        public override Task<HelloReply> SayHello(HelloRequest request, ServerCallContext context)
+        public override Task<Shared.Protos.HelloReply> SayHello(Shared.Protos.HelloRequest request, ServerCallContext context)
         {
-            return Task.FromResult(new HelloReply
+            return Task.FromResult(new Shared.Protos.HelloReply
             {
-                Message = "Hello " + request.Name
+                Message = "Hello World" + request.Text
+                
             });
         }
 
-        public override Task<HelloReply> GetTime(HelloRequest request, ServerCallContext context)
+        public override Task<Shared.Protos.TimeReply> GetTime(Shared.Protos.TimeRequest request, ServerCallContext context)
         {
-            return Task.FromResult(new HelloReply
+            return Task.FromResult(new Shared.Protos.TimeReply
             {
-                Message = "Hello " + request.Name
+                Hour = request.Hour,
+                Minute = request.Minute,
+                Second = request.Second,
             });
         }
     }

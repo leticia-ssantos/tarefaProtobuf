@@ -1,9 +1,11 @@
 ﻿syntax = "proto3";
 
-package greet;
+package Protos;
 
-option csharp_namespace = "Shared";
+option csharp_namespace = "Shared.Protos";
 
+import "Protos/hello.proto";
+import "Protos/time.proto";
 
 service Greeter {
   // Sends a greeting
