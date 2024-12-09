@@ -1,12 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿syntax = "proto3";
 
-namespace Shared
-{
-    class time
-    {
-    }
+package greet;
+
+option csharp_namespace = "GrpcGreeter";
+
+message TimeRequest {
+  uint32 hour = 1;
+  uint32 minute = 2;
+  uint32 second = 3;
+}
+
+message TimeReply {
+  uint32 hour = 1;
+  uint32 minute = 2;
+  uint32 second = 3;
 }

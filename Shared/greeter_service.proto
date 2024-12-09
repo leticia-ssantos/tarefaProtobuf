@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿syntax = "proto3";
 
-namespace Shared
-{
-    class greeter_service
-    {
-    }
+package greet;
+
+option csharp_namespace = "Shared";
+
+
+service Greeter {
+  // Sends a greeting
+  rpc SayHello (HelloRequest) returns (HelloReply);
+  rpc GetTime (TimeRequest) returns (TimeReply);
 }

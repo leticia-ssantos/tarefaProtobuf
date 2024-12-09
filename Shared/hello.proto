@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿syntax = "proto3";
 
-namespace Shared
-{
-    class hello
-    {
-    }
+package greet;
+
+option csharp_namespace = "GrpcGreeter";
+
+
+message HelloRequest {
+  string text = 1;
+}
+
+message HelloReply {
+  string text = 1;
 }
