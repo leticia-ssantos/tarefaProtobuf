@@ -7,8 +7,17 @@ option csharp_namespace = "Shared.Protos";
 import "Protos/hello.proto";
 import "Protos/time.proto";
 
+message Req{
+	float number = 1;
+
+}
+
+message Resp{
+	float number = 1;
+}
+
 service Greeter {
-  // Sends a greeting
   rpc SayHello (HelloRequest) returns (HelloReply);
   rpc GetTime (TimeRequest) returns (TimeReply);
+  rpc GetHalf (Req) returns (Resp);
 }
