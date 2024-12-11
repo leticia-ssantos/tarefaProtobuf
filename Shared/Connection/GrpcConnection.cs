@@ -4,7 +4,7 @@ using Grpc.Net.Client.Web;
 
 namespace Shared.Connection
 {
-    internal class GrpcConnection : IGrpcConnection
+    public class GrpcConnection : IGrpcConnection
     {
         public GrpcChannel Channel { get; private set; }
 
