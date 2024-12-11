@@ -2,8 +2,6 @@
 
 package Protos;
 
-import "google/protobuf/timestamp.proto";
-
 option csharp_namespace = "Shared.Protos";
 
 message TimeRequest {
