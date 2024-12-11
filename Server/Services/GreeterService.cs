@@ -10,7 +10,7 @@ namespace Server.Services
         {
             return Task.FromResult(new Shared.Protos.HelloReply
             {
-                Message = "Hello " + request.Text
+                Message = "Seja bem vindo(a) " + request.Text + "!"
                 
             });
         }
